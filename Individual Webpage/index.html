@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Bitons' Corp</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: #ffa786;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: orangered;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			font-size: 17px;
+			border: 2px solid whitesmoke;
+			border-radius: 9px;
+            background-color: white;
+            color: black;
+		}
+
+		.firstsection {
+			background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+			height: 400px;
+            text-align: left;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: white;            
+		}
+		h3{
+			font-size: 30px;
+		}
+
+		.secondsection {
+			background-image: -webkit-linear-gradient(120deg, #90e0ef 50%, #caf0f8 50%);
+			background-repeat: no-repeat;
+			padding-bottom: 5%;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.tag{
+			padding-right: 40%;
+		}
+		.btn {
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+		.btn:hover{
+			background-color: rgb(255, 107, 22);
+		}
+
+		.btn-sm {
+			padding: 15px 30px;
+			vertical-align: middle;
+			font-size: large;
+		}
+
+		.section-bottom {
+			background-image: url("images/form.jpg");
+			background-repeat: no-repeat;
+            background-size: 100% 100%;
+			height: 600px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+		
+		.sectionSubTag {
+			padding-left: 50%;
+		}
+		.sectionTag{
+			padding-left: 50%;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+
+		.container{
+			max-width: 900px;
+			margin: 0 auto;
+			margin-left: 35%;
+		}
+
+		.apply_box{
+			max-width: 600px;
+			padding: 20px;
+			background-color: white;
+			margin: 0 auto;
+			margin-top: 50px;
+			box-shadow: 4px 3px 5px rgba(1,1,1,0.1);
+			border-radius: 10px;
+		}
+
+		.title_small{
+			font-size: 20px;
+		}
+
+		.form_container{
+			margin: 20px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+			grid-gap:20px;
+		}
+
+		.form_control{
+			display: flex;
+			flex-direction: column;
+		}
+
+		label{
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+
+		input , select , textarea{
+			padding: 6px 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 15px;
+		}
+
+		input:focus{
+			outline-color: red;
+		}
+
+		.button_container{
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 20px;
+		}
+
+		button{
+			background-color: red;
+			border: transparent solid 2px;
+			padding: 5px 10px;
+			color: white;
+			border-radius: 8px;
+			transition:0.3s ease-in;
+		}
+
+		button:hover{
+			background-color: #ccc;
+			border: 2px solid red;
+			color: black;
+			transition:0.3s ease-out;
+			cursor: pointer;
+		}
+
+		.textarea_control{
+		grid-column: 1 / span 2;
+		}
+
+		.textarea_control textarea{
+			width: 100%;
+		}
+
+		@media(max-width:460px){
+			.textarea_control{
+				grid-column: 1 / span 1;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo.png">
+			</div>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">APPLICATION STATUS</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<button class="btn btn-sm">LOGIN / SIGN UP</button>
+		</div>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf tag">
+				<h1 id="web">Go for it!</h1>
+				<h3><i>Develop your Experience into Progress</i></h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<!--form-->
+				<div class="container">
+					<div class="apply_box">
+				
+						<h1> 
+							APPLY NOW
+						</h1>
+				
+						<form action="">
+				
+							<div class="form_container">
+				
+									<div class="form_control">
+									<label for="First Name">First Name</label>
+									<input type="text" name="First Name" id="First Name" placeholder="Enter Your First Name....">
+									</div>
+							
+									<div class="form_control">
+									<label for="Last Name">Last Name</label>
+									<input type="text" name="Last Name" id="Last Name" placeholder="Enter Your Last Name....">
+									</div>
+							
+									<div class="form_control">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" placeholder="Enter Email....">
+									</div>
+							
+									<div class="form_control">
+									<label for="jobrole">Job Role</label>
+									<select name="jobrole" id="jobrole">
+									<option value="bd">Backend Developer</option>
+									<option value="fd">Frontend Developer</option>
+									 <option value="fsd">Full Stack Developer</option>
+									</select>
+									</div>
+							
+									<div class="textarea_control">
+									<label for="emailaddress">Email Address</label>
+									<textarea name="emailaddress" id="emailaddress" cols="50" rows="4" placeholder="Enter Email Address..."></textarea>
+									</div>
+							
+									<div class="form_control">
+									<label for="city">City</label>
+									<input type="text" name="city" id="city" placeholder="Enter City....">    
+									</div>
+							
+									<div class="form_control">
+									<label for="pincode">Pincode</label>
+									<input type="number" name="pincode" id="pincode" placeholder="Enter Pincode....">
+									</div>
+							
+									<div class="form_control">
+									<label for="date">Start Date</label>
+									<input type="date" name="date" id="date"> 
+									</div>
+							
+									<div class="form_control">
+									<label for="file">Upload Your CV</label>
+									<input type="file" name="file" id="file"> 
+									</div>
+				
+							</div>
+									<div class="button_container">
+										<button type="submit">Apply Now</button>
+									</div>
+				
+						</form>
+				
+					</div>
+				
+				</div>
+				<!--end of form-->
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section-bottom">
+		<div class="paras">
+			<h1 class="sectionTag text-big">We’re glad and grateful you’re here.</h1>
+
+			<p class="sectionSubTag text-small">
+				exists to provide a trusted learning and development ecosystem for online entrepreneurs. We are honored to help folks at all stages of their journey make progress toward new levels of success. Whether you’re an aspiring entrepreneur or an accomplished one, we’re here for you.
+			</p>
+		</div>
+	</section>
+
+	<footer class="background">
+		<p class="text-footer">
+			Copyright ©-All rights are reserved
+		</p>
+
+
+	</footer>
+</body>
+
+</html>
